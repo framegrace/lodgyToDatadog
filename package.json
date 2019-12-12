@@ -1,0 +1,9 @@
+{
+    "name": "lodgytodatadog",
+    "version": "1.0.0",
+    "dependencies": {},
+    "devDependencies": {
+        "mocha": "6.2.2",
+        "chai": "4.2.0"
+    }
+}
