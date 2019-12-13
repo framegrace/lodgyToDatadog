@@ -50,7 +50,7 @@ http.createServer(function (request, response) {
                         if (ddevent != null) {
                             // We send the event to datadog
                             ddhandler.sendEvent(ddevent)
-                                .then(res => { console.log("Event sent") }) // Request OK
+                                .then(res => { console.log("Event sent");console.log(res.status);console.log(res) }) // Request OK
                                 .catch(err => { console.log("Datadog error: %s %s", err.status, err.message) }); //Log Request KO
                         } else {
                             // We log an error if the event object was wrong

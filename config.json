@@ -4,6 +4,6 @@
         "priority" : "normal",
         "alert_type" : "error",
         "api_host": "https://api.datadoghq.eu/api/v1",
-        "api_key": "BLAH"
+        "api_key": "418baa680c7b5fa3130adfdc4eabaf66"
     }
 }

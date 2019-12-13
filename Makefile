@@ -18,7 +18,7 @@ docker: $(SRC_FILES) Dockerfile
 # the safer solution.
 # Application fails if no config file present.
 docker-run: docker
-	docker run -d --rm -v `pwd`/config.json:/src/config.json -p 8080:8080 --name lodgytodatadog runner
+	docker run -d --rm -v `pwd`/config.json:/src/config.json -p 80:80 --name lodgytodatadog runner
 
 # Builds and runs the app image, and shells into it.
 docker-shell: docker-run
