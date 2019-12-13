@@ -3,7 +3,9 @@ var http = require('http');
 
 
 const Handler = require('./handlers/lodgyAlertHandler');
+const DDHandler = require('./handlers/dataDogEventHandler');
 const handler = new Handler();
+const ddhandler= new DDHandler();
 
 
 
@@ -28,13 +30,15 @@ http.createServer(function (request, response) {
         if (request.method === 'POST') {
             switch (request.url) {
                 case '/alert':
-                    if (handler.Alert(body)) {
-                        response.statusCode = 200;
-                        response.setHeader('Content-Type', 'application/json');
-                        response.write('{ "errorCode": 0 }')
-                    } else {
-                        response.statusCode = 500;
-                    };
+                    console.log("ReceivedAlert")
+                    ddhandler.sendEvent({});
+                    //if (handler.Alert(body)) {
+                    //    response.statusCode = 200;
+                    //    response.setHeader('Content-Type', 'application/json');
+                    //    response.write('{ "errorCode": 0 }')
+                    //} else {
+                    //    response.statusCode = 500;
+                    //};
                     break
                 default:
                     response.statusCode = 404
