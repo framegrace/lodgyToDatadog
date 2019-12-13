@@ -1,5 +1,8 @@
+// Handles lodgy Requests
 class lodgyAlertHandler {
 
+    // We create a template to validate the receiving object-
+    // Anyhting we receive, has to have this properties.
     constructor() {
         this.lodgyAlertTemplate = {
             "alert_name": "",
@@ -17,19 +20,23 @@ class lodgyAlertHandler {
         };
     }
 
+    // Generating a lodgyAlert object from json text
     generateLodgyAlert(body) {
         try {
+            // Parse json into JS object.
             let lodgyAlert = JSON.parse(body);
             // Simple validation of received object,
-            // using an object template
+            // using the object template
             for (let key in this.lodgyAlertTemplate) {
                 if (!lodgyAlert[key]) {
                     // Not a valid object
                     return null
                 }
             }
+            // We return it
             return lodgyAlert;
         } catch (err) {
+            // Or log an error and return null
             console.log("Invalid JSON: %s", err.message);
             return null;
         }
