@@ -73,10 +73,10 @@ describe('#generateLodgyAlert()', function() {
   describe('#Alert()', function() {
     context('With JSON Arguments', function() {
       it('Should return false on wrong format.', function() {
-        expect(handler.Alert(sampleBadRequest)).to.false
+        expect(handler.generateLodgyAlert(sampleBadRequest)).to.null
       })
       it('Should return true with correct format', function() {
-        expect(handler.Alert(sampleRequest)).to.not.true
+        expect(handler.generateLodgyAlert(sampleRequest)).to.not.null
       })
     })
   })

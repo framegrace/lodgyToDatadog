@@ -1,0 +1,9 @@
+{
+    "lodgycallbackurl" : "/alert",
+    "datadog": {
+        "priority" : "normal",
+        "alert_type" : "error",
+        "api_host": "https://api.datadoghq.eu/api/v1",
+        "api_key": "BLAH"
+    }
+}

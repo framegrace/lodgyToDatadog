@@ -17,9 +17,7 @@ class lodgyAlertHandler {
         };
     }
 
-
     generateLodgyAlert(body) {
-        //console.log(body);
         try {
             let lodgyAlert = JSON.parse(body);
             // Simple validation of received object,
@@ -35,16 +33,6 @@ class lodgyAlertHandler {
             console.log("Invalid JSON: %s", err.message);
             return null;
         }
-    }
-
-    Alert(body) {
-        let alert=this.generateLodgyAlert(body);
-        if (alert) {
-
-        } else {
-            return false;
-        }
-
     }
 }
 

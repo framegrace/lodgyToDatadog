@@ -1,7 +1,0 @@
-{
-    "LodgyCallbackURL" : "/alerts",
-    "DataDog": {
-        "api_host": "https://api.datadoghq.eu/api/v1",
-        "api_key": "BLAH"
-    }
-}
